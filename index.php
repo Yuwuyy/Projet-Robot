@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Commande Robot</title>
+    <title>IHM ROBOT</title>
   </head>
   <body>
     <h1> commande robot </h1>
