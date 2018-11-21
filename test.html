@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+      #pot {
+        left: -20px;
+        position: absolute;
+        top: 90px;
+        -webkit-transform: rotate(-90deg);
+      }
+      #info {
+        background-color: grey;
+        color:white;
+        font-family:verdana;
+        left: 12px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="info">0</p>
+    <input  type="range" max="255" value="0" id="pot">
+    <script>
+      document.getElementById("pot").addEventListener("mousemove", ind);
+      document.getElementById("pot").addEventListener("mouseup", send2php); 
+      function send2php() {
+        window.location.href="./slid.php?byte=" + document.getElementById("pot").value;
+      }
+      function ind() {
+        document.getElementById('info').innerHTML = document.getElementById('pot').value;
+      }
+    </script>
+  </body>
+</html>
